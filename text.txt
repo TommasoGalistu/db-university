@@ -49,7 +49,10 @@ FROM `students`
 GROUP BY YEAR(`enrolment_date`)
 
 2
-
+SELECT COUNT(*) AS `numero_uffici` , `office_address` 
+FROM `teachers` 
+GROUP BY `office_address`
+ORDER BY `numero_uffici`
 
 3
 SELECT AVG(`vote`) AS `avg_vote`, `exam_id`
@@ -58,6 +61,7 @@ WHERE `vote` >= 18
 GROUP BY `exam_id`
 
 4
+SELECT COUNT(*) `nr_corsi`, `department_id` 
+FROM `degrees` 
+GROUP BY `department_id`
 
-
-RIVEDERE IL 5
